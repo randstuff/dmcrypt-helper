@@ -1,9 +1,13 @@
 #!/bin/bash                                                                                                            
-# -x   
+
+
+#
+# Don't forget to change these var
+#
 
 FILENAME="/tmp/crypt";                                                                                          
 FILESIZE="10M";                                                                                                       
-VOLUMENAME="crypt"                                                                                                   
+VOLUMENAME="crypt" ;                                                                                                    
 
 DMH_create() {                                                                                                         
                                                                                                                        
@@ -18,7 +22,6 @@ DMH_create() {
 
         ##############################################################
         echo "Create container"
-        #cryptsetup --hash sha512 --key-size 512 --iter-time 5000 luksFormat /dev/loop0 encrypted;
         cryptsetup -y luksFormat --hash sha512 --key-size 512 --use-random --iter-time 5000 $FILENAME
 
         ##############################################################

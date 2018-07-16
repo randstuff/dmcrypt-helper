@@ -9,3 +9,12 @@
         -u,--umount : umount the container
         -h,--help: Prints this help
 
+## Notes 
+
+Don't forget to change the following default variables : 
+ - FILENAME
+ - FILESIZE
+ - VOLUMENAME
+
+
+
